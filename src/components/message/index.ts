@@ -1,2 +1,2 @@
-import StarMessage from './src/StarMessage.vue'
-export default StarMessage
+// import StarMessage from './src/StarMessage.vue'
+// export default StarMessage

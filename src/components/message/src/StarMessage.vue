@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <Transition name="down">
     <div class="star-message" v-if="isShow">
       <div class="star-m-i" >
@@ -99,4 +99,4 @@ onMounted(() => {
 .icon-error {
   color: var(--error-color);
 }
-</style>
+</style> -->

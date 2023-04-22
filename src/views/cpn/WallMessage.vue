@@ -158,27 +158,27 @@ const newCard = (card: any) => {
 }
 
 const lottieRef = ref()
-const loadings = () => {
-  if (isOk.value == -1) {
-    nextTick(async () => {
-      const param = {
-        container: lottieRef.value,
-        render: 'svg',
-        loop: true,
-        autoplay: true,
-        animationData: loading
-      }
-      lottie.loadAnimation(param)
-    })
-  }
-}
-loadings()
+// const loadings = () => {
+//   if (isOk.value == -1) {
+//     nextTick(async () => {
+//       const param = {
+//         container: lottieRef.value,
+//         render: 'svg',
+//         loop: true,
+//         autoplay: true,
+//         animationData: loading
+//       }
+//       lottie.loadAnimation(param)
+//     })
+//   }
+// }
+// loadings()
 
-getWallCard()
-async function getWallCard() {
-  const res = await findwallpageFn()
-  console.log(res)
-}
+// getWallCard()
+// async function getWallCard() {
+//   const res = await findwallpageFn()
+//   console.log(res)
+// }
 </script>
 
 <style scoped lang="less">

@@ -58,25 +58,25 @@
     </div>
     <div class="foot">
       <StarButton nom="csecondary" @click="closeModalFn">星弃</StarButton>
-      <StarButton nom="primary" size="max" @click="submit">星存</StarButton>
+      <StarButton nom="primary" size="max">星存</StarButton>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { cardColor } from '@/mock'
-import { getCurrentInstance, onMounted, ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import { label } from '@/mock/data'
 import StarButton from '@/components/button'
 import { getFileContent } from '@/utils/getImg'
-import useUserStore from '@/stores/user/user'
-import { insertwallFn } from '@/service/api'
+// import useUserStore from '@/stores/user/user'
+// import { insertwallFn } from '@/service/api'
 
-const props = defineProps<{
+defineProps<{
   id: number
 }>()
 
-const store = useUserStore()
+// const store = useUserStore()
 
 const currentIndex = ref(0)
 const checkColorFn = (i: number) => {
@@ -105,25 +105,25 @@ const upload = () => {
 
 const message = ref('')
 const name = ref('')
-const apps = getCurrentInstance()
+// const apps = getCurrentInstance()
 
-const submit = async () => {
-  const res = await insertwallFn({
-    type: props.id,
-    message: message.value,
-    name: name.value,
-    userId: store.user.id,
-    label: labelIndex.value,
-    color: currentIndex.value,
-    imgUrl: ''
-  })
-  message.value = ''
-  emit('newCard', res)
-  apps?.appContext.config.globalProperties.$message({
-    message: 'ss',
-    type: 'success'
-  })
-}
+// const submit = async () => {
+//   const res = await insertwallFn({
+//     type: props.id,
+//     message: message.value,
+//     name: name.value,
+//     userId: store.user.id,
+//     label: labelIndex.value,
+//     color: currentIndex.value,
+//     imgUrl: ''
+//   })
+//   message.value = ''
+//   emit('newCard', res)
+//   apps?.appContext.config.globalProperties.$message({
+//     message: 'ss',
+//     type: 'success'
+//   })
+// }
 onMounted(() => {})
 </script>
 
