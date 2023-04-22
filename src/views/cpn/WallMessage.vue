@@ -68,8 +68,8 @@
 </template>
 
 <script setup lang="ts">
-import { wallType, label, none } from '@/mock/data'
-import { computed, nextTick, ref } from 'vue'
+import { wallType, label } from '@/mock/data'
+import { computed, ref } from 'vue'
 import NoteCard from '@/components/notecard'
 import { note, photo } from '@/mock'
 import useScroll from '@/utils/watchScrollTop'
@@ -79,9 +79,6 @@ import CardDetail from '@/components/carddetail'
 import bus from '@/utils/mitt'
 import PhotoCard from '@/components/photocard'
 import StarViper from '@/components/viper'
-import lottie from 'lottie-web'
-import loading from '@/assets/img/loading.json'
-import { findwallpageFn } from '@/service/api'
 
 const isOk = ref(-1)
 const card = computed(() => {
