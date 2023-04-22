@@ -5,12 +5,10 @@ import router from './router'
 import pinia from './stores'
 import 'normalize.css'
 import '@/assets/css/index.less'
-// import plugin from './plugin/message'
 
 const app = createApp(App)
 
 app.use(pinia)
 app.use(router)
-// app.use(plugin)
 
 app.mount('#app')
